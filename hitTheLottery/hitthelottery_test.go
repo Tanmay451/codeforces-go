@@ -12,8 +12,8 @@ func TestNumberOfBills(t *testing.T) {
 		{4, 4},     // 4 1-dollar bills
 		{10, 1},    // 1 10-dollar bill
 		{27, 4},    // 1 20-dollar bill, 1 5-dollar bill, 2 1-dollar bills
-		{99, 6},    // 3 20-dollar bills, 1 10-dollar bill, 1 5-dollar bill, 1 1-dollar bill
-		{123, 6},   // 1 100-dollar bill, 1 20-dollar bill, 1 1-dollar bill
+		{99, 10},   // 4 20-dollar bills, 1 10-dollar bill, 1 5-dollar bill, 4 1-dollar bill
+		{123, 5},   // 1 100-dollar bill, 1 20-dollar bill, 3 1-dollar bill
 		{1000, 10}, // 10 100-dollar bills
 	}
 
