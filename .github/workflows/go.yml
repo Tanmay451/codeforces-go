@@ -25,4 +25,4 @@ jobs:
       run: go test -v ./... -bench=. -count 5
 
     - name: Generate Test Report
-      run: ./generate_test_report.sh
+      run: ./generate_test_report
