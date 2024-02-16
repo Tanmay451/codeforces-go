@@ -35,3 +35,6 @@ jobs:
           echo "Code coverage is $coverage%, below the required threshold. Please improve the code coverage."
           exit 1
         fi
+      
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
