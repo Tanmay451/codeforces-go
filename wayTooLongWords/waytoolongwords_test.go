@@ -1,6 +1,7 @@
 package main
 
 import (
+	"strings"
 	"testing"
 )
 
@@ -21,5 +22,13 @@ func TestProcessWord(t *testing.T) {
 		if result != tc.expected {
 			t.Errorf("Expected %s for input %s, but got %s", tc.expected, tc.input, result)
 		}
+	}
+}
+
+func BenchmarkProcessWord(b *testing.B) {
+	// Benchmark the processWord function with a long word to simulate real-world usage
+	longWord := strings.Repeat("a", 100)
+	for i := 0; i < b.N; i++ {
+		processWord(longWord)
 	}
 }

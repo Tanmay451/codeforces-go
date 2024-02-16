@@ -24,3 +24,9 @@ func TestNumberOfBills(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkNumberOfBills(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		numberOfBills(123)
+	}
+}
