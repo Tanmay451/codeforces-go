@@ -17,8 +17,9 @@ jobs:
 
     - name: Install Tools
       run: |
-        go get github.com/t-yuki/gocover-cobertura
-        go get github.com/Boskey/cobertura-calculate
+        go env -w GOPROXY=https://proxy.golang.org,direct
+        go get -u github.com/t-yuki/gocover-cobertura
+        go get -u github.com/Boskey/cobertura-calculate
 
     - name: Run Tests and Generate Coverage Report
       run: |
