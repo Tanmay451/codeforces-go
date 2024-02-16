@@ -52,7 +52,7 @@ func colorDiagonals(n, k int) int {
 	if k <= 2*c {
 		return (k + 1) / 2
 	}
-	r = k - 2*c
+	r := k - 2*c
 	return r + c
 }
 
