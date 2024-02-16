@@ -1,1 +1,5 @@
 python3 generate_test_file.py
+go test -coverpkg=./... -coverprofile=profile.cov ./... > ignore
+rm ignore
+go tool cover -func profile.cov | fgrep total | awk '{print substr($3, 1, length($3)-1)}'
+rm profile.cov
