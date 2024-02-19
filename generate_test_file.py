@@ -4,7 +4,8 @@ def generate_files_in_folders(root_directory):
     for foldername, subfolders, _ in os.walk(root_directory):
         if ".git" in foldername:
             continue
-        if foldername == "./template" or foldername == "./":
+        if foldername == "./Template" or foldername == "./template" \
+            or foldername == "./":
             continue        
         
         folder_path = os.path.join(root_directory, foldername)
