@@ -19,3 +19,11 @@ func minUsingBit(x, y int) int {
 	result := y ^ ((x ^ y) & mask)
 	return result
 }
+
+func isEven(n int) bool {
+	return n&1 == 0
+}
+
+func isOdd(n int) bool {
+	return n&1 == 1
+}

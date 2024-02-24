@@ -98,3 +98,14 @@ func readULongs() []uint64 {
 	}
 	return arr
 }
+
+// Helper function to convert a space-separated string of integers to an array of integers
+func convertStringToIntArray(str string) []int {
+	strValues := strings.Fields(str)
+	intValues := make([]int, len(strValues))
+	for i, v := range strValues {
+		num, _ := strconv.Atoi(v)
+		intValues[i] = num
+	}
+	return intValues
+}
